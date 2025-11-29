@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "framework": "angular",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/portal/browser",
+  "builds": [
+    {
+      "src": "dist/portal/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     { "src": "/(.*)", "dest": "/index.html" }
   ]
