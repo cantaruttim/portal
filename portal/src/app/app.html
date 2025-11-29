@@ -1,0 +1,35 @@
+<div class="login-container">
+  <h2>Login</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      required
+    />
+
+    <label for="senha">Senha</label>
+    <input
+      id="senha"
+      type="password"
+      [(ngModel)]="senha"
+      name="senha"
+      required
+    />
+
+    <div class="checkbox-area">
+      <input
+        id="lembrar"
+        type="checkbox"
+        [(ngModel)]="lembrar"
+        name="lembrar"
+      />
+      <label for="lembrar">Lembrar-me</label>
+    </div>
+
+    <button type="submit">Entrar</button>
+  </form>
+</div>
